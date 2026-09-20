@@ -33,3 +33,7 @@ Runs inside Claude Code, so it has real filesystem access and skips the manual-c
 ## Why two separate skills instead of one
 
 The decision logic (project type, template rules, how to handle mixed projects, how to preserve user-specific content) is identical. What differs is *how each environment gets its inputs and delivers its output* — one has to ask-and-hand-back, the other can inspect-and-write-directly. Keeping them as separate `SKILL.md` files avoids one skill needing conditional branches for "if I have filesystem access, do X, otherwise do Y" scattered throughout.
+
+## Licence
+
+MIT. See `LICENSE`.

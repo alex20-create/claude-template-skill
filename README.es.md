@@ -33,3 +33,7 @@ Corre dentro de Claude Code, así que tiene acceso real al sistema de archivos y
 ## Por qué dos skills separadas en vez de una sola
 
 La lógica de decisión (tipo de proyecto, reglas de plantillas, cómo tratar proyectos mixtos, cómo preservar contenido específico del usuario) es idéntica. Lo que cambia es *cómo cada entorno recibe sus datos y entrega el resultado* — una tiene que preguntar-y-entregar, la otra puede inspeccionar-y-escribir-directo. Mantenerlas como `SKILL.md` separados evita que una sola skill necesite ramas condicionales tipo "si tengo acceso al sistema de archivos, haz X, si no, haz Y" repartidas por todo el archivo.
+
+## Licencia
+
+MIT. Ver `LICENSE`.

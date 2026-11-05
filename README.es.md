@@ -26,7 +26,7 @@ Corre dentro de un Proyecto de claude.ai. No tiene acceso directo al sistema de 
 ### [`skills/claude-code/`](skills/claude-code/SKILL.md) — para Claude Code
 
 Corre dentro de Claude Code, así que tiene acceso real al sistema de archivos y se salta el paso de copiar a mano. Esta versión:
-- Lista y lee directamente la carpeta local de plantillas (por defecto `C:\Claude Code\Plantillas`).
+- Lista y lee directamente la carpeta local de plantillas; la ruta sale de tu `CLAUDE.md` o la skill te la pregunta.
 - Inspecciona los archivos reales del proyecto destino — lee `package.json`/`requirements.txt`/etc. para inferir el stack técnico, comprueba si ya existe un `CLAUDE.md`, y compara uno existente contra el repo real para distinguir "verificado" de "escrito a mano."
 - Escribe el `CLAUDE.md` compuesto (y archivos complementarios) directamente en el proyecto, tras confirmar con el usuario.
 

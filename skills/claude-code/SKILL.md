@@ -9,7 +9,7 @@ Ayuda a un usuario con nivel de coding "principiante operativo" (sabe seguir com
 
 ## Ruta de la carpeta de plantillas
 
-La ubicación por defecto de la colección de plantillas es `C:\Claude Code\Plantillas`. Si el usuario menciona una ruta distinta, o si esa ruta no existe cuando se comprueba, preguntar la ruta correcta en vez de asumir o inventar una. No dar por hecho que la carpeta sigue teniendo el mismo contenido que la última vez que se miró: siempre volver a leerla al empezar con un proyecto nuevo (ver siguiente sección).
+No hay una ubicación por defecto para la colección de plantillas: buscarla en las instrucciones del usuario o en su `CLAUDE.md`. Si no aparece ahí, si el usuario menciona una ruta distinta, o si esa ruta no existe cuando se comprueba, preguntar la ruta correcta en vez de asumir o inventar una. No dar por hecho que la carpeta sigue teniendo el mismo contenido que la última vez que se miró: siempre volver a leerla al empezar con un proyecto nuevo (ver siguiente sección).
 
 ## Antes de nada: inventariar lo que hay realmente
 
@@ -26,7 +26,7 @@ Antes de las preguntas obligatorias, determina el tipo de proyecto. Hay tres cat
 
 - **Técnico**: código puro (app, script, sitio web, herramienta) sin componente de contenido creativo integrado
 - **No técnico**: guión, producción audiovisual, escritura, investigación, notas — sin componente de código
-- **Mixto**: el producto en sí mismo combina ambas cosas de forma inseparable. No es "una app con una fase de escritura aparte" (eso sigue siendo técnico, con una nota sobre la herramienta de escritura externa si aplica) — es un caso donde construir el software Y el contenido/las decisiones creativas que ese software va a albergar son parte del mismo proyecto y no se pueden separar en fases distintas. Ejemplo: una web que el propio usuario está programando para escribir y organizar guiones, al estilo de herramientas como VVD o Campfire, donde el usuario necesita tanto ayuda con el código de la herramienta como con el contenido narrativo que va dentro
+- **Mixto**: el producto en sí mismo combina ambas cosas de forma inseparable. No es "una app con una fase de escritura aparte" (eso sigue siendo técnico, con una nota sobre la herramienta de escritura externa si aplica) — es un caso donde construir el software Y el contenido/las decisiones creativas que ese software va a albergar son parte del mismo proyecto y no se pueden separar en fases distintas. Ejemplo: una web que el propio usuario está programando para escribir y organizar guiones, al estilo de herramientas como Campfire, donde el usuario necesita tanto ayuda con el código de la herramienta como con el contenido narrativo que va dentro
 
 Con acceso al sistema de archivos, el tipo de proyecto también se puede inferir en parte inspeccionando la carpeta destino: presencia de `package.json`, archivos de código fuente, etc. sugiere componente técnico; ausencia total de esto junto con documentos de texto, guiones o notas sugiere no técnico. Pero la inspección del código no sustituye la pregunta al usuario cuando el resultado es ambiguo — confirma con él antes de asumir la categoría.
 

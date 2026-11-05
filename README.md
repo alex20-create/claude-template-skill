@@ -26,7 +26,7 @@ Runs inside a claude.ai Project. It has no direct filesystem access, so it:
 ### [`skills/claude-code/`](skills/claude-code/SKILL.md) — for Claude Code
 
 Runs inside Claude Code, so it has real filesystem access and skips the manual-copy step. It:
-- Lists and reads the local templates folder directly (default `C:\Claude Code\Plantillas`).
+- Lists and reads the local templates folder directly; its path comes from your `CLAUDE.md`, or the skill asks for it.
 - Inspects the target project's actual files — reads `package.json`/`requirements.txt`/etc. to infer the tech stack, checks whether a `CLAUDE.md` already exists, compares an existing one against the real repo to tell "verified" from "handwritten."
 - Writes the composed `CLAUDE.md` (and companion files) straight into the project, after confirming with the user.
 

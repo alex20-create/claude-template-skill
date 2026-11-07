@@ -1,5 +1,5 @@
 ---
-name: claude-md-template-picker
+name: template-picker
 description: 'Ayuda a decidir qué plantilla(s) CLAUDE.md copiar a la carpeta de un proyecto concreto, sea de código (apps, scripts) o no (guión, producción audiovisual, escritura), usando como referencia la colección de archivos .md (plantillas, guía de migración, plantilla de historial, docs de plataforma) que el usuario tiene guardados en el Proyecto activo de Claude.ai. Actívala cuando el usuario pregunte por un proyecto concreto y quiera elegir, comparar o aplicar plantillas de CLAUDE.md para Claude Code, cuando mencione que tiene "plantillas", "templates", o una colección de archivos CLAUDE-*.md, o cuando pregunte si debe migrar un CLAUDE.md existente. No asumas nombres de archivo fijos ni que el proyecto es una app: la colección de plantillas y el tipo de proyecto cambian según el caso.'
 ---
 

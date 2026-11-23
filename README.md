@@ -8,8 +8,9 @@ Both skills ask the same core questions before recommending anything:
 
 - **What kind of project is this?** Technical (pure code), non-technical (screenplay, film production, writing, research), or mixed (a tool whose own content/creative decisions are inseparable from the code, like a custom screenwriting app).
 - **Does a `CLAUDE.md` already exist?** And if so, was it verified against the real codebase (has specific, unfakeable detail) or just handwritten/inherited (safe to migrate)?
-- **Is this a short-lived/experimental project or something maintained for weeks/months?** This decides whether to pull in the compact template or the fuller one, and whether to add a development-history template.
-- **Which platform-specific docs actually apply?** These are only ever copied for the services the project genuinely uses — a Cloudflare doc that covers Workers, D1, KV, R2, etc. gets trimmed to just the sections the project needs, not copied wholesale.
+- **Is this a short-lived/experimental project or something maintained for weeks/months?** This decides whether to add a development-history template. The base template is always the lightest one in the collection that fits, however long the project lasts.
+- **Which platform-specific docs actually apply?** These are only ever copied for the services the project genuinely uses — a Cloudflare doc that covers Workers, D1, KV, R2, etc. gets trimmed to just the sections the project needs, not copied wholesale, and lands in its own file next to the `CLAUDE.md`, not inside it.
+- **How heavy will the file be?** Claude Code loads the whole `CLAUDE.md` into every session, so both skills compose it against a size budget in bytes: history and long procedures go to their own files with a one-line pointer, rules a higher-level `CLAUDE.md` already states are left out, and the result's size is reported.
 
 Neither skill invents missing information: unknown fields are marked `[PENDING: ...]` rather than guessed.
 

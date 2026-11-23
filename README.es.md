@@ -8,8 +8,9 @@ Ambas skills hacen las mismas preguntas base antes de recomendar nada:
 
 - **¿Qué tipo de proyecto es?** Técnico (código puro), no técnico (guión, producción audiovisual, escritura, investigación), o mixto (una herramienta cuyo propio contenido/decisiones creativas son inseparables del código, como una app de escritura de guiones hecha a medida).
 - **¿Ya existe un `CLAUDE.md`?** Y si existe, ¿fue verificado contra el repositorio real (tiene detalle específico que no se podría inventar) o es solo escrito a mano/heredado (seguro de migrar)?
-- **¿Es un proyecto puntual/experimental o algo que se mantiene semanas/meses?** Esto decide si usar la plantilla compacta o la más completa, y si añadir plantilla de historial de desarrollo.
-- **¿Qué docs específicos de plataforma aplican de verdad?** Solo se copian para los servicios que el proyecto usa realmente — un doc de Cloudflare que cubre Workers, D1, KV, R2, etc. se recorta a solo las secciones que el proyecto necesita, no se copia entero.
+- **¿Es un proyecto puntual/experimental o algo que se mantiene semanas/meses?** Esto decide si añadir la plantilla de historial de desarrollo. La plantilla base es siempre la más ligera de la colección que sirva, dure lo que dure el proyecto.
+- **¿Qué docs específicos de plataforma aplican de verdad?** Solo se copian para los servicios que el proyecto usa realmente — un doc de Cloudflare que cubre Workers, D1, KV, R2, etc. se recorta a solo las secciones que el proyecto necesita, no se copia entero, y va a su propio archivo junto al `CLAUDE.md`, no dentro de él.
+- **¿Cuánto va a pesar el archivo?** Claude Code carga el `CLAUDE.md` entero en cada sesión, así que las dos skills lo componen contra un presupuesto en bytes: el historial y los procedimientos largos van a sus propios archivos con un puntero de una línea, las reglas que ya da un `CLAUDE.md` de nivel superior se dejan fuera, y se dice cuánto pesa el resultado.
 
 Ninguna de las dos skills inventa información que falta: los campos desconocidos se marcan como `[PENDIENTE: ...]` en vez de suponerlos.
 
